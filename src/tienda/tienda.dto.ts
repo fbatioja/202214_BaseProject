@@ -5,7 +5,7 @@ export class TiendaDto {
   @IsNotEmpty()
   readonly nombre: string;
 
-  @IsNumber()
+  @IsString()
   @IsNotEmpty()
   readonly ciudad: number;
 
