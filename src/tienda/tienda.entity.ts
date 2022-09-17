@@ -1,4 +1,4 @@
-import { ProductoEntity } from 'src/producto/producto.entity';
+import { ProductoEntity } from '../producto/producto.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -13,7 +13,7 @@ export class TiendaEntity {
   id: string;
 
   @Column()
-  name: string;
+  nombre: string;
 
   @Column()
   ciudad: string;
@@ -22,6 +22,5 @@ export class TiendaEntity {
   direccion: string;
 
   @ManyToMany(() => ProductoEntity, (producto) => producto.tiendas)
-  @JoinTable()
   productos: ProductoEntity[];
 }
